@@ -58,7 +58,7 @@ python main.py
 
 ## Installing
 ```bash
-$ node .
+$ python main.py
 ```
 
 ## ❗ Warning
