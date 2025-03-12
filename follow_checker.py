@@ -1,24 +1,19 @@
-from instabot import Bot
-import time
-import os
-
-def check_follow_status(account):
-    bot = Bot()
-    session_path = f"sessions/{account['username']}"
-    
-    if os.path.exists(session_path):
-        bot.load_session(account['username'])
-    else:
-        bot.login(username=account['username'], password=account['password'])
-
-    followers = bot.get_user_followers(account['username'])
-    return followers
+from config import Bot
 
 def main():
-    for account in INSTAGRAM_ACCOUNTS:
-        followers = check_follow_status(account)
-        print(f"Akun {account['username']} memiliki {len(followers)} followers")
+	print("Menjalankan pengecekan akun yang mengikuti...")
 
-if __name__ == "__main__":
-    main()
+def check_follow_status(account):
+    " " "
+        Mengecek daftar pengikut dari target.
+            Mengembalikan daftar followers atau pesan error jika gagal.
+             " " "
+    try:
+    	if bot is None :
+    	raise ValueError("Bot belum diinstalasi dengan benar")
+        if not hasattr(Bot , "get_user_followers")
+        raise AtributeError("Bot tidak memiliki metode get_user_followers")
+        followers = Bot.get_user_followers()
+        except Exception as e:
+        	print(f"Terjadi kesalahan: {e}")
     
